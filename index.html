@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nova Cart | Online Shopping</title>
+
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+
+    <header class="navbar">
+        <a href="#" class="logo">✦ Nova Cart</a>
+
+        <input
+            type="search"
+            id="searchInput"
+            placeholder="Search products..."
+            aria-label="Search products"
+        >
+
+        <div class="nav-actions">
+            <button id="loginOpen" class="signin-btn">Sign In</button>
+            <button id="cartOpen" class="cart-btn">
+                🛒 Cart (<span id="cartCount">0</span>)
+            </button>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="hero-content">
+                <span class="eyebrow">YOUR EVERYDAY SHOPPING DESTINATION</span>
+                <h1>Good finds.<br>Great prices.</h1>
+                <p>Discover products you'll love, all in one place.</p>
+                <button id="shopNow" class="primary-btn">
+                    Explore Products →
+                </button>
+            </div>
+            <div class="hero-art">
+                <img
+                    src="https://images.unsplash.com/photo-1607082349566-187342175e2f?auto=format&fit=crop&w=900&q=85"
+                    alt="Shopping bags and online shopping"
+                >
+            </div>
+        </section>
+        
+<!-- Demo Payment Page -->
+<section id="paymentPage" class="login-overlay" hidden>
+    <div class="login-box">
+        <button id="paymentClose" class="close-btn"
+                aria-label="Close payment">×</button>
+
+        <h2>Nova Cart Payment</h2>
+        <p id="paymentWelcome">Welcome!</p>
+
+        <h3>Total: ₹<span id="paymentAmount">0</span></h3>
+
+        <button id="payNow" class="primary-btn">
+            Pay Now
+        </button>
+
+        <p id="paymentMessage" role="status"></p>
+
+        <small>
+            Demo only. No real payment will be processed.
+        </small>
+    </div>
+</section>
+        <section id="collection" class="collection">
+            <div class="section-heading">
+                <div>
+                    <span class="eyebrow">HANDPICKED FOR YOU</span>
+                    <h2>Explore our collection</h2>
+                </div>
+                <p>Quality picks for everyday life.</p>
+            </div>
+
+            <div class="categories">
+                <button class="category-btn active" data-category="All">All</button>
+                <button class="category-btn" data-category="Tech">Tech</button>
+                <button class="category-btn" data-category="Lifestyle">Lifestyle</button>
+                <button class="category-btn" data-category="Home">Home</button>
+            </div>
+
+            <div class="products" id="products">
+                <!-- JavaScript adds product cards here -->
+            </div>
+
+            <p id="emptyMessage" hidden>
+                No products found. Try another search.
+            </p>
+        </section>
+    </main>
+
+    <section id="loginPage" class="login-overlay" hidden>
+        <div class="login-box">
+            <button id="loginClose" class="close-btn"
+                    aria-label="Close sign in">×</button>
+
+            <h2>Welcome to Nova Cart</h2>
+            <p>Sign in to continue shopping.</p>
+
+            <form id="loginForm">
+                <label for="loginEmail">Email address</label>
+                <input type="email" id="loginEmail"
+                       placeholder="Enter your email" required>
+
+                <label for="loginPassword">Password</label>
+                <input type="password" id="loginPassword"
+                       placeholder="Enter your password" required>
+
+                <button type="submit" class="primary-btn">Sign In</button>
+            </form>
+
+            <p id="loginMessage" role="status"></p>
+            <small>Demo only. Real authentication is not connected.</small>
+        </div>
+    </section>
+
+    <aside id="cartPanel" class="cart-panel" aria-label="Shopping cart"
+           aria-hidden="true">
+        <div class="cart-heading">
+            <h2>Your Cart</h2>
+            <button id="cartClose" class="close-btn"
+                    aria-label="Close cart">×</button>
+        </div>
+
+        <div id="cartItems"></div>
+
+        <div class="cart-total">
+            <h3>Subtotal: ₹<span id="subtotal">0</span></h3>
+            <button id="checkout" class="primary-btn">
+                Proceed to Checkout
+            </button>
+            <small>Demo checkout. No payment is processed.</small>
+        </div>
+    </aside>
+
+    <footer id="contact">
+        <a href="#" class="logo">✦ Nova Cart</a>
+        <p>Everyday essentials. Better finds.</p>
+        <p>Contact: support@novacart.example</p>
+        <p>© 2026 Nova Cart. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>
